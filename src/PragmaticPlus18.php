@@ -83,7 +83,7 @@ class PragmaticPlus18 extends Plugin
         );
     }
 
-    public function getCpNavItem(): array
+    public function getCpNavItem(): ?array
     {
         return null;
     }
