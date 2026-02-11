@@ -1,0 +1,12 @@
+{% extends parentLayout|default('_layouts/cp') %}
+
+{% set title = title ?? '+18' %}
+{% set selectedSubnavItem = 'plus18' %}
+{% set selectedTab = craft.app.request.getSegment(2) %}
+
+{% set tabs = {
+  'general': { label: 'General', url: url('pragmatic-plus18/general') },
+  'options': { label: 'Opciones', url: url('pragmatic-plus18/options') }
+} %}
+
+{% block content %}{% endblock %}
