@@ -2,7 +2,7 @@
   "name": "pragmatic/pragmatic-plus18",
   "description": "Pragmatic +18 plugin for Craft CMS",
   "type": "craft-plugin",
-  "license": "proprietary",
+  "license": "MIT",
   "require": {
     "php": ">=8.2",
     "craftcms/cms": "^5.0"
@@ -22,9 +22,9 @@
     "email": "oriolnoya@pragmatic.cat"
   },
   "extra": {
-    "name": "Pragmatic +18",
     "handle": "pragmatic-plus18",
     "class": "pragmatic\\plus18\\PragmaticPlus18",
+    "name": "Pragmatic +18",
     "developer": "Pragmatic",
     "developerUrl": "https://www.pragmatic.cat",
     "documentationUrl": "https://github.com/pragmaticcat/pragmatic-plus18/blob/main/README.md",
