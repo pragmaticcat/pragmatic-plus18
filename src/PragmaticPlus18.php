@@ -25,6 +25,12 @@ class PragmaticPlus18 extends Plugin
         parent::init();
         self::$plugin = $this;
 
+        Craft::$app->i18n->translations['pragmatic-plus18'] = [
+            'class' => \yii\i18n\PhpMessageSource::class,
+            'basePath' => __DIR__ . '/translations',
+            'forceTranslation' => true,
+        ];
+
         Event::on(
             UrlManager::class,
             UrlManager::EVENT_REGISTER_CP_URL_RULES,
@@ -35,13 +41,15 @@ class PragmaticPlus18 extends Plugin
             }
         );
 
+        // Register nav item under shared "Tools" group
         Event::on(
             Cp::class,
             Cp::EVENT_REGISTER_CP_NAV_ITEMS,
             function (RegisterCpNavItemsEvent $event) {
+                $toolsLabel = Craft::t('pragmatic-plus18', 'Tools');
                 $groupKey = null;
                 foreach ($event->navItems as $key => $item) {
-                    if (($item['label'] ?? '') === 'Pragmatic' && isset($item['subnav'])) {
+                    if (($item['label'] ?? '') === $toolsLabel && isset($item['subnav'])) {
                         $groupKey = $key;
                         break;
                     }
@@ -49,8 +57,8 @@ class PragmaticPlus18 extends Plugin
 
                 if ($groupKey === null) {
                     $newItem = [
-                        'label' => 'Pragmatic',
-                        'url' => 'pragmatic-plus18/general',
+                        'label' => $toolsLabel,
+                        'url' => 'pragmatic-plus18',
                         'icon' => __DIR__ . '/icons/icon.svg',
                         'subnav' => [],
                     ];
