@@ -1,5 +1,5 @@
 {
-  "name": "pragmatic/pragmatic-plus18",
+  "name": "pragmatic/plus18-craftcms-plugin",
   "description": "Pragmatic +18 plugin for Craft CMS",
   "type": "craft-plugin",
   "license": "MIT",
@@ -22,12 +22,12 @@
     "email": "oriolnoya@pragmatic.cat"
   },
   "extra": {
-    "handle": "pragmatic-plus18",
+    "handle": "pragmatic-plus18-craftcms-plugin",
     "class": "pragmatic\\plus18\\PragmaticPlus18",
     "name": "Pragmatic +18",
     "developer": "Pragmatic",
     "developerUrl": "https://www.pragmatic.cat",
-    "documentationUrl": "https://github.com/pragmaticcat/pragmatic-plus18/blob/main/README.md",
+    "documentationUrl": "https://github.com/pragmaticcat/plus18-craftcms-plugin/blob/main/README.md",
     "hasSettings": true,
     "hasCpSection": true
   }
